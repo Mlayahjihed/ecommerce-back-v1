@@ -1,0 +1,15 @@
+# Fichiers de configuration sensibles
+.env
+
+# Modules Node (gros dossier inutile sur GitHub)
+node_modules/
+
+# Logs et fichiers temporaires
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dossier de build ou cache éventuel
+dist/
+build/
+.cache/

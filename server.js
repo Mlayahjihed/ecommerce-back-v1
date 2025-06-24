@@ -16,7 +16,7 @@ const commentRoutes = require('./routes/commentRoutes');
 const path = require('path');
 
 app.use(cors({
-    origin: "https://ecommerce-front-v1-alpha.vercel.app", // Autorise uniquement ton frontend
+    origin: process.env.FRONT, // Autorise uniquement ton frontend
     credentials: true // Autorise l'envoi des cookies et headers d'authentification
   }));
 // Middleware to parse JSON

@@ -24,6 +24,9 @@ app.use(express.json());
 app.use(cookieParser());
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 //all Api 
+app.get("/", (req, res) => {
+  res.send("✅ Backend is working!");
+});
 app.use("/api/auth", authRoutes);
 app.use('/api/marques', marqueRoutes);
 app.use("/api/produits", produitRoutes);

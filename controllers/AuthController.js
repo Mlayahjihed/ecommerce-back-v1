@@ -115,7 +115,7 @@ exports.forget = async (req, res) => {
     await existingUser.save();
 
       // Create reset url to email to provided email
-  const resetUrl = `http://localhost:3000/auth/reset-password/${resetToken}`;
+  const resetUrl = `https://ecommerce-front-v1-alpha.vercel.app/auth/reset-password/${resetToken}`;
   // HTML Message
   const message = `
   <div style="max-width: 600px; margin: 0 auto; padding: 20px; border: 2px solid #e0e0e0; border-radius: 10px; font-family: Arial, sans-serif;">

@@ -121,8 +121,7 @@ exports.getCommentsByProducts = async (req, res) => {
  
     // 🔎 Comptage total pour pagination
     const countResult = await Comment.count({
-      include: includeOptions,
-      
+      where: whereCondition
     });
 
     // 📥 Récupération des commentaires paginés

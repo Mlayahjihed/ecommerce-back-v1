@@ -88,7 +88,7 @@ exports.deleteComment = async (req, res) => {
 };
 exports.getCommentsByProducts = async (req, res) => {
   try {
-    const { page = 1, limit = 10, search = '' } = req.query;
+    const { page = 1, limit = 8, search = '' } = req.query;
     const offset = (page - 1) * limit;
 
     const whereCondition = {};
@@ -118,7 +118,7 @@ exports.getCommentsByProducts = async (req, res) => {
         required: false
       }
     ];
-
+ 
     // 🔎 Comptage total pour pagination
     const countResult = await Comment.count({
       include: includeOptions,
